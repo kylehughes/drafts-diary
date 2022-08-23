@@ -6,12 +6,16 @@
 
 // Requires library_diary.js to be included in the Drafts Action.
 
-let entryDate = draft.createdAt;
-let entryBody = editor.getText()
-let diaryDraft = getOrMakeDailyDiaryDraft(entryDate);
+(
+    function () {
+        let entryDate = draft.createdAt;
+        let entryBody = editor.getText()
+        let diaryDraft = getOrMakeDailyDiaryDraft(entryDate);
 
-if (draft.uuid == diaryDraft.uuid) {
-    context.fail(`Cannot process the diary draft itself`);
-} else {
-    appendEntryToDraft(entryDate, entryBody, diaryDraft);
-}
+        if (draft.uuid == diaryDraft.uuid) {
+            context.fail(`Cannot process the diary draft itself`);
+        } else {
+            appendEntryToDraft(entryDate, entryBody, diaryDraft);
+        }
+    }
+)();
