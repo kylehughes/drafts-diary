@@ -8,6 +8,15 @@
 
 (
     function () {
-        editor.load(getOrMakeDailyDiaryDraft(draft.createdAt));
+        let diaryDraft = getOrMakeDailyDiaryDraft(draft.createdAt);
+
+        if (diaryDraft == null) {
+            context.fail(
+                `More than one draft has the title of the diary ` +
+                `(or a substring matches)`
+            );
+        } else {
+            editor.load(diaryDraft);
+        }
     }
 )();

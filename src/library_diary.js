@@ -184,7 +184,7 @@
  
  /**
   * @param {Date} entryDate
-  * @returns {Draft}
+  * @returns {?Draft}
   */
  function getOrMakeDailyDiaryDraft(entryDate) {
      let title = makeTitleForDraftOfDiary(entryDate);
@@ -200,6 +200,6 @@
      } else if (1 == drafts.length) {
          return drafts[0];
      } else {
-         context.fail(`More than one draft has the title ${title}`);
+         return null;
      }
  }
