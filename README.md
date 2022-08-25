@@ -1,6 +1,7 @@
 # Drafts Diary
 
-[Action Group in Directory](https://directory.getdrafts.com/g/2C1)
+[Action Group in Drafts Directory](https://directory.getdrafts.com/g/2C1)  
+[Syntax in Drafts Directory](https://directory.getdrafts.com/s/2C4)
 
 ## Overview
 
