@@ -188,7 +188,7 @@
   */
  function getOrMakeDailyDiaryDraft(entryDate) {
      let title = makeTitleForDraftOfDiary(entryDate);
-     let drafts = Draft.query(title, "all", [tag], [], "created", false, false);
+     let drafts = Draft.query(`"${title}"`, "all", [tag], [], "created", false, false);
  
      if (0 == drafts.length) {
          var newDraft = Draft.create();
